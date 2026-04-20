@@ -11,7 +11,6 @@ support_agent = Agent(
     system_prompt=load_prompt("support_agent_system_prompt").format(num_sentences=3),
 )
 
-
 @support_agent.tool_plain
 def lookup_faq(category: str) -> str:
     f"""{load_prompt("lookup_faq_description").format()}"""
